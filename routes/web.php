@@ -17,5 +17,5 @@ Route::get('/mahasiswa', function () {
 Route::get('/profil', action: function () {
     $nama = 'nia';
     return view('profil',data: compact('nama'));
-    //return view('profil)->with('nama,nama));
+     //return view('profil')->with('nama',$nama));
 });
