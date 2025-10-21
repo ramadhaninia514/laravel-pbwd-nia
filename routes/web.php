@@ -19,3 +19,9 @@ Route::get('/profil', action: function () {
     return view('profil',data: compact('nama'));
      //return view('profil')->with('nama',$nama));
 });
+
+Route::get('array',function(){
+    for ($i=0; $i <= 5; $i++) {
+        echo 'Hello world ' . $i . 'x<br>';
+    }
+}); 
