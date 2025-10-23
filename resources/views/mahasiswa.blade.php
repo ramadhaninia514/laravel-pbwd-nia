@@ -49,23 +49,24 @@
       </tr>
     </thead>
     <tbody>
-      <?php $nilai_awal - 1; ?>
+      <?php $nilai_awal = 0; ?>
       @while ($nilai_awal < $jumlah)
+
       <tr>
-        <td>123</td>
-        <td>Fulan</td>
+        <td>{{ $npm[$nilai_awal] }}</td>
+        <td>{{ $nama[$nilai_awal] }}</td>
         <td>Laki-laki</td>
         <td>30-09-05</td>
-        <td></td>Kota medan</td>  
+        <td>ta_medan</td>  
       </tr>
 
       <?php $nilai_awal++ ?>
       @endwhile
-      <tr>
     </tbody>
    </table>
+
 </div>
-   
+
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

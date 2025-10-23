@@ -11,7 +11,10 @@ Route::get('about', function () {
 });
 
 Route::get('mahasiswa', function () {
-    return view('mahasiswa');
+    $npm = [123,124,125,126];
+    $nama = ['apis','pis','nia','iaa'];
+    $jumlah = count ($npm);
+    return view('mahasiswa',compact('npm', 'jumlah', 'nama'));
 });
 
 Route::get('profil', action: function () {
@@ -20,13 +23,4 @@ Route::get('profil', action: function () {
      //return view('profil')->with('nama',$nama));
 });
 
-Route::get('array', function() {
-    // infinate loop
-    $nilai_awal = 1;
-
-    while ($nilai_awal <= 100) {
-        echo 'Hello Laravel' . $nilai_awal . 'x<br>';
-        $nilai_awal++;
-    }
-});
 
