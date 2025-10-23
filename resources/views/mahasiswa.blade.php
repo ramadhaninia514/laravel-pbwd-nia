@@ -37,10 +37,7 @@
 <div class="container" style="margin-left: 30px">
    <h1>ini adalah halaman mahasiswa</h1> 
 
-   {{-- 
-     ROWSPAN = untuk menggabungkan baris
-     COLSPAN = untuk menggabungkan kolom
-   --}}
+   
 
    <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
     <thead>
@@ -52,25 +49,19 @@
       </tr>
     </thead>
     <tbody>
+      <?php $nilai_awal - 1; ?>
+      @while ($nilai_awal < $jumlah)
       <tr>
         <td>123</td>
         <td>Fulan</td>
         <td>Laki-laki</td>
         <td>30-09-05</td>
-        <td rowspan="3">Kota medan</td>
+        <td></td>Kota medan</td>  
       </tr>
+
+      <?php $nilai_awal++ ?>
+      @endwhile
       <tr>
-        <td>123</td>
-        <td>Fuji</td>
-        <td>Laki-laki</td>
-        <td>30-09-05</td>
-      </tr>
-      <tr>
-        <td>123</td>
-        <td>Fuso</td>
-        <td>Laki-laki</td>
-        <td>30-09-05</td>
-      </tr>
     </tbody>
    </table>
 </div>

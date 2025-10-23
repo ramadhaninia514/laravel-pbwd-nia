@@ -6,22 +6,27 @@ Route::get('/', action: function ()  {
     return view('index');
 });
 
-Route::get('/about', function () {
+Route::get('about', function () {
     return view('about');
 });
 
-Route::get('/mahasiswa', function () {
+Route::get('mahasiswa', function () {
     return view('mahasiswa');
 });
 
-Route::get('/profil', action: function () {
+Route::get('profil', action: function () {
     $nama = 'nia';
     return view('profil',data: compact('nama'));
      //return view('profil')->with('nama',$nama));
 });
 
-Route::get('array',function(){
-    for ($i=0; $i <= 5; $i++) {
-        echo 'Hello world ' . $i . 'x<br>';
+Route::get('array', function() {
+    // infinate loop
+    $nilai_awal = 1;
+
+    while ($nilai_awal <= 100) {
+        echo 'Hello Laravel' . $nilai_awal . 'x<br>';
+        $nilai_awal++;
     }
-}); 
+});
+
